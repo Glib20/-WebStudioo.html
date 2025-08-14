@@ -12,17 +12,15 @@
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   color: var(--color-dgray);
-}
-ul {
-  list-style-type: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
+
+/* Логотип */
 .header-logo,
 .footer-logo {
   font-family: 'Raleway', sans-serif;
@@ -35,7 +33,6 @@ ul {
 .footer-logo-span {
   color: var(--color-blue);
 }
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -55,7 +52,6 @@ ul {
   gap: 5px;
   text-align: c;
 }
-
 
 .hero {
   background-color: var(--color-fon);
