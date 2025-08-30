@@ -55,7 +55,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  text-align: c;
 }
 
 .hero {
@@ -94,12 +93,49 @@ body {
 
 .about-us-item {
   flex: 1 1 calc(25% - 30px);
-  min-width: 200px;
+  min-width: 220px;
+  text-align: center;
+  position: relative;
+  padding-top: 140px; /* місце під іконку */
 }
+
+.about-us-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 4px;
+  background-color: #f5f4fa; /* світло-сірий фон */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60px 60px;
+}
+
+/* --- Іконки для кожної картки --- */
+.about-us-item:nth-child(1)::before {
+  background-image: ("C:\Users\acer\Downloads\Group 1.png"); /* мікроскоп */
+}
+
+.about-us-item:nth-child(2)::before {
+  background-image: url("C:\Users\acer\Downloads\Group 2.png"); /* годинник */
+}
+
+.about-us-item:nth-child(3)::before {
+  background-image: url("C:\Users\acer\Downloads\Group 3.png"); /* графік */
+}
+
+.about-us-item:nth-child(4)::before {
+  background-image: url("C:\Users\acer\Downloads\Group 4.png"); /* ракета */
+}
+
 
 .about-us-title {
   font-weight: 700;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .about-us-description {
@@ -137,7 +173,7 @@ body {
   display: block;
 }
 
-
+/* ===== Our Team ===== */
 .our-team {
   background-color: var(--color-lgray);
   padding: 60px 20px;
@@ -183,6 +219,7 @@ body {
   color: var(--color-gray);
 }
 
+/* ===== Footer ===== */
 .footer {
   background-color: var(--color-fon);
   color: var(--color-white);
