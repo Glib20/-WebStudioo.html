@@ -7,25 +7,34 @@
   --color-white: #fff;
   --color-fon: #2f302f;
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   color: var(--color-dgray);
-  margin: 0;
-  padding: 0;
 }
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-/* Логотип */
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
 .header-logo,
 .footer-logo {
   font-family: 'Raleway', sans-serif;
@@ -37,13 +46,6 @@ body {
 .header-logo-span,
 .footer-logo-span {
   color: var(--color-blue);
-}
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  flex-wrap: wrap;
 }
 
 .header nav ul {
@@ -57,7 +59,10 @@ body {
   gap: 5px;
 }
 
+/* Hero */
 .hero {
+  background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background: url(img/Img.jpg) center/cover no-repeat;
   background-color: var(--color-fon);
   color: var(--color-white);
   text-align: center;
@@ -78,8 +83,15 @@ body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+  transition: box-shadow 0.3s ease;
 }
 
+.hero-button:hover {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* About us */
 .about-us {
   padding: 60px 20px;
 }
@@ -96,41 +108,33 @@ body {
   min-width: 220px;
   text-align: center;
   position: relative;
-  padding-top: 140px; /* місце під іконку */
+  padding-top: 140px;
 }
 
 .about-us-item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
-  height: 120px;
-  border-radius: 4px;
-  background-color: #f5f4fa; /* світло-сірий фон */
+  content: '';
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 30px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 60px 60px;
+  background-size: contain;
 }
 
-/* --- Іконки для кожної картки --- */
+/* Індивідуальні іконки */
 .about-us-item:nth-child(1)::before {
-  background-image: ("C:\Users\acer\Downloads\Group 1.png"); /* мікроскоп */
+  background-image: url('WEB.jpg');
 }
-
 .about-us-item:nth-child(2)::before {
-  background-image: url("C:\Users\acer\Downloads\Group 2.png"); /* годинник */
+  background-image: url('');
 }
-
 .about-us-item:nth-child(3)::before {
-  background-image: url("C:\Users\acer\Downloads\Group 3.png"); /* графік */
+  background-image: url('');
 }
-
 .about-us-item:nth-child(4)::before {
-  background-image: url("C:\Users\acer\Downloads\Group 4.png"); /* ракета */
+  background-image: url('');
 }
-
 
 .about-us-title {
   font-weight: 700;
@@ -144,7 +148,7 @@ body {
   line-height: 1.5;
 }
 
-/* ===== We Do This ===== */
+/* What we do */
 .we-do-this {
   padding: 60px 20px;
 }
@@ -171,9 +175,16 @@ body {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
 }
 
-/* ===== Our Team ===== */
+.we-do-this-img:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Our Team */
 .our-team {
   background-color: var(--color-lgray);
   padding: 60px 20px;
@@ -199,7 +210,12 @@ body {
   padding: 10px;
   text-align: center;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.our-team-member:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .our-team-img {
@@ -219,15 +235,11 @@ body {
   color: var(--color-gray);
 }
 
-/* ===== Footer ===== */
+/* Footer */
 .footer {
   background-color: var(--color-fon);
   color: var(--color-white);
   padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
 }
 
 .footer-logo {
