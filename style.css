@@ -124,7 +124,7 @@ body {
 
 /* Індивідуальні іконки */
 .about-us-item:nth-child(1)::before {
-  background-image: url('WEB.jpg');
+  background-image: url('web.jpg');
 }
 .about-us-item:nth-child(2)::before {
   background-image: url('');
@@ -256,3 +256,4 @@ body {
   color: var(--color-white);
   margin-bottom: 8px;
 }
+
