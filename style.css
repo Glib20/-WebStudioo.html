@@ -110,7 +110,24 @@ body {
   text-align: center;
   padding-top: 40px;
 }
-
+.about-us-item::before { 
+  content: ''; 
+  display: block;
+   width: 100px; height:100px;
+    margin: 0 auto 30px; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: contain; } 
+    /* Індивідуальні іконки */
+    
+    .about-us-item:nth-child(1)::before { 
+      background-image: url('web.jpg'); }
+     .about-us-item:nth-child(2)::before {
+       background-image: url('gra.jpg'); } 
+     .about-us-item:nth-child(3)::before { 
+      background-image: url('gre.jpg'); } 
+     .about-us-item:nth-child(4)::before {
+       background-image: url('gro.jpg'); }
 .about-us-title {
   font-weight: 700;
   margin-bottom: 10px;
@@ -122,6 +139,7 @@ body {
   color: var(--color-gray);
   line-height: 1.5;
 }
+
 
 /* What we do */
 .we-do-this {
@@ -232,4 +250,3 @@ body {
   color: var(--color-white);
   margin-bottom: 8px;
 }
-
