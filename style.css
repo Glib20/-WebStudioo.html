@@ -1,7 +1,7 @@
 :root {
   --color-gray: #757575;
   --color-dgray: #212121;
-  --color-lgray: #ececec;
+  --color-lgray: #f5f4fa;
   --color-black: #000;
   --color-blue: #2196f3;
   --color-white: #fff;
@@ -61,12 +61,12 @@ body {
 
 /* Hero */
 .hero {
-  background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
-  background: url(img/Img.jpg) center/cover no-repeat;
-  background-color: var(--color-fon);
+  background: 
+    linear-gradient(rgba(47, 48, 58, 0.6), rgba(47, 48, 58, 0.6)),
+    url("img/Img.jpg") center/cover no-repeat;
   color: var(--color-white);
   text-align: center;
-  padding: 60px 20px;
+  padding: 120px 20px;
 }
 
 .hero-text {
@@ -93,6 +93,7 @@ body {
 
 /* About us */
 .about-us {
+  background-color: var(--color-white);
   padding: 60px 20px;
 }
 
@@ -107,33 +108,7 @@ body {
   flex: 1 1 calc(25% - 30px);
   min-width: 220px;
   text-align: center;
-  position: relative;
-  padding-top: 140px;
-}
-
-.about-us-item::before {
-  content: '';
-  display: block;
-  width: 100px;
-  height: 100px;
-  margin: 0 auto 30px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-/* Індивідуальні іконки */
-.about-us-item:nth-child(1)::before {
-  background-image: url('web.jpg');
-}
-.about-us-item:nth-child(2)::before {
-  background-image: url('');
-}
-.about-us-item:nth-child(3)::before {
-  background-image: url('');
-}
-.about-us-item:nth-child(4)::before {
-  background-image: url('');
+  padding-top: 40px;
 }
 
 .about-us-title {
@@ -150,6 +125,7 @@ body {
 
 /* What we do */
 .we-do-this {
+  background-color: var(--color-lgray);
   padding: 60px 20px;
 }
 
@@ -186,7 +162,7 @@ body {
 
 /* Our Team */
 .our-team {
-  background-color: var(--color-lgray);
+  background-color: var(--color-white);
   padding: 60px 20px;
 }
 
