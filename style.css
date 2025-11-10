@@ -51,6 +51,7 @@ body {
 .header nav ul {
   display: flex;
   gap: 30px;
+  list-style: none;
 }
 
 .header-contacts {
@@ -61,11 +62,12 @@ body {
 
 /* Hero */
 .hero {
- background: linear-gradient(rgba(47, 48, 58, 0.6), rgba(47, 48, 58, 0.6)),
-  url(img.jpg) center/cover no-repeat; 
+  background: linear-gradient(rgba(47, 48, 58, 0.6), rgba(47, 48, 58, 0.6)),
+    url(img.jpg) center/cover no-repeat;
   color: var(--color-white);
-   text-align: center; padding: 
-   120px 20px; }
+  text-align: center;
+  padding: 120px 20px;
+}
 
 .hero-text {
   font-size: 48px;
@@ -114,23 +116,6 @@ body {
   padding-top: 40px;
 }
 
-.about-us-item::before { 
-  content: ''; 
-  display: block;
-  width: 100px; 
-  height:100px;
-  margin: 0 auto 30px; 
-  background-repeat: no-repeat; 
-  background-position: center; 
-  background-size: contain; 
-}
-
-/* Індивідуальні іконки */
-.about-us-item:nth-child(1)::before { background-image: url('web.jpg'); }
-.about-us-item:nth-child(2)::before { background-image: url('gra.jpg'); }
-.about-us-item:nth-child(3)::before { background-image: url('gre.jpg'); }
-.about-us-item:nth-child(4)::before { background-image: url('gro.jpg'); }
-
 .about-us-title {
   font-weight: 700;
   margin-bottom: 10px;
@@ -163,8 +148,11 @@ body {
 }
 
 .we-do-this-item {
+  position: relative;
   flex: 1 1 calc(33.33% - 20px);
   min-width: 250px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .we-do-this-img {
@@ -172,12 +160,25 @@ body {
   height: auto;
   display: block;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
-.we-do-this-img:hover {
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+.we-do-this-item:hover .we-do-this-img {
+  transform: scale(1.05);
+}
+
+.we-do-this-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(47, 48, 58, 0.8);
+  color: var(--color-white);
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 20px 0;
+  text-transform: uppercase;
 }
 
 /* Our Team */
@@ -253,7 +254,7 @@ body {
   margin-bottom: 8px;
 }
 
-/* Адаптивність */
+/* Responsive */
 @media (max-width: 768px) {
   .hero-text {
     font-size: 32px;
